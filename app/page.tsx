@@ -25,29 +25,29 @@ type AnalysisResult = {
   success: boolean;
   cpElements?: Array<{
     tag: string;
-    classes: string;
+    classes: string[]; // Changed to string[]
     id?: string;
   }>;
   dataScrollElements?: Array<{
     tag: string;
-    classes: string;
+    classes: string[]; // Changed to string[]
     id?: string;
     dataScroll?: string;
   }>;
   emptyAltImgs?: Array<{
     tag: string;
     src: string;
-    classes: string;
+    classes: string[]; // Changed to string[]
     id?: string;
   }>;
   cdpGridElements?: Array<{
     tag: string;
-    classes: string;
+    classes: string[]; // Changed to string[]
     id?: string;
   }>;
   brandpageElements?: Array<{
     tag: string;
-    classes: string;
+    classes: string[]; // Changed to string[]
     id?: string;
   }>;
   error?: string;
