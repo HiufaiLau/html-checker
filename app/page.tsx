@@ -159,51 +159,6 @@ export default function HtmlChecker() {
               <Card>
                 <CardHeader>
                   <CardTitle className='flex items-center gap-2'>
-                    <Grid2X2 className='h-5 w-5 text-blue-500' />
-                    Elements with &apos;cdp_grid&apos; class
-                  </CardTitle>
-                  <CardDescription>
-                    Found {result.cdpGridElements?.length ?? 0} elements
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  {result.cdpGridElements?.length ? (
-                    <div className='space-y-4'>
-                      {result.cdpGridElements.map((element, index) => (
-                        <div
-                          key={index}
-                          className='p-4 rounded-lg border bg-muted/50'
-                        >
-                          <code className='text-sm'>
-                            <span className='text-blue-500'>
-                              &lt;{element.tag}
-                            </span>
-                            {element.id && (
-                              <span className='text-purple-500'>
-                                {" "}
-                                id=&quot;{element.id}&quot;
-                              </span>
-                            )}
-                            <span className='text-green-500'>
-                              {" "}
-                              class=&quot;{element.classes}&quot;
-                            </span>
-                            <span className='text-blue-500'>&gt;</span>
-                          </code>
-                        </div>
-                      ))}
-                    </div>
-                  ) : (
-                    <p className='text-muted-foreground'>
-                      No elements found with &apos;cdp_grid&apos; class
-                    </p>
-                  )}
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <CardTitle className='flex items-center gap-2'>
                     <LayoutTemplate className='h-5 w-5 text-purple-500' />
                     Elements with &apos;brandpage&apos; class
                   </CardTitle>
@@ -241,6 +196,51 @@ export default function HtmlChecker() {
                   ) : (
                     <p className='text-muted-foreground'>
                       No elements found with &apos;brandpage&apos; class
+                    </p>
+                  )}
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <CardTitle className='flex items-center gap-2'>
+                    <Grid2X2 className='h-5 w-5 text-blue-500' />
+                    Elements with &apos;cdp_grid&apos; class
+                  </CardTitle>
+                  <CardDescription>
+                    Found {result.cdpGridElements?.length ?? 0} elements
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  {result.cdpGridElements?.length ? (
+                    <div className='space-y-4'>
+                      {result.cdpGridElements.map((element, index) => (
+                        <div
+                          key={index}
+                          className='p-4 rounded-lg border bg-muted/50'
+                        >
+                          <code className='text-sm'>
+                            <span className='text-blue-500'>
+                              &lt;{element.tag}
+                            </span>
+                            {element.id && (
+                              <span className='text-purple-500'>
+                                {" "}
+                                id=&quot;{element.id}&quot;
+                              </span>
+                            )}
+                            <span className='text-green-500'>
+                              {" "}
+                              class=&quot;{element.classes}&quot;
+                            </span>
+                            <span className='text-blue-500'>&gt;</span>
+                          </code>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <p className='text-muted-foreground'>
+                      No elements found with &apos;cdp_grid&apos; class
                     </p>
                   )}
                 </CardContent>
